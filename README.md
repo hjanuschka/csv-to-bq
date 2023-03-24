@@ -1,6 +1,10 @@
 # Email with CSV Attachment to BigQuery
 
+## Prerequisite
 
+- google api project
+- `google.json` service account to write into bigquery
+- bq dataset with name  `test`
 
 ## Run
 
