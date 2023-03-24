@@ -1,0 +1,12 @@
+{
+    "name": "hjanuschka/src",
+    "authors": [
+        {
+            "name": "Helmut Januschka",
+            "email": "helmut@januschka.com"
+        }
+    ],
+    "require": {
+        "google/cloud-bigquery": "^1.24"
+    }
+}

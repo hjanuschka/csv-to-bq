@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mailin:
+    image: loomio/mailin-docker:latest
+    ports:
+      - "25:25"
+    environment:
+      - WEBHOOK_URL=http://webhook:80
+    networks:
+      - mail
+  webhook:
+    build:
+      dockerfile: Dockerfile.php
+    volumes:
+      - ./src:/var/www/html
+      - ./keys:/keys
+    ports:
+      - "80:80"
+    networks:
+      - mail
+
+networks:
+  mail:
